@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business_layer.Repository
 {
-    internal class MedlemRepository
+    internal class MedlemRepository : IRepository<Medlem>
     {
 		private List<Bokning> bokningsLista;
 		public List<Bokning> BokningsLista
@@ -13,5 +13,29 @@ namespace Business_layer.Repository
 			set { bokningsLista = value; }
 		}
 
+		public IEnumerable<Medlem> HämtaAlla()
+		{
+			throw new NotImplementedException();
+		}
+
+		public Medlem HämtaMedID(int ID)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void LäggTill(Medlem entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void TaBort(Medlem entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void Uppdatera(Medlem entity)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

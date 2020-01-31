@@ -13,8 +13,8 @@ namespace Business_layer.Repository
 			set { bokLista = value; }
 		}
 
-		private List<Bok> bokningsLista;
-		public List<Bok> BokningsLista
+		private List<Bokning> bokningsLista;
+		public List<Bokning> BokningsLista
 		{
 			get { return bokningsLista; }
 			set { bokningsLista = value; }
@@ -54,7 +54,7 @@ namespace Business_layer.Repository
 
 		public IEnumerable<Bokning> HämtaAlla()
 		{
-			throw new NotImplementedException();
+			return bokningsLista;
 		}
 	}
 }

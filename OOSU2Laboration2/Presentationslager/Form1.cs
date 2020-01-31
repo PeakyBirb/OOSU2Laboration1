@@ -13,7 +13,7 @@ namespace Presentationslager
 {
     public partial class Form1 : Form
     {
-        
+        BusinessManager bm = new BusinessManager();
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Presentationslager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            bm.HämtaAllaBokningar();
         }
     }
 }
