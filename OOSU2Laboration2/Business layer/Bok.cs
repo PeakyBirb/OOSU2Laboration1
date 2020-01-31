@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business_layer
 {
-    class Bok
+    class Bok : IRepository<Bok>
     {
 		private string ISBNnummer;
 		public string ISBNNummer
@@ -32,6 +32,31 @@ namespace Business_layer
 		{
 			get { return antalKopior; }
 			set { antalKopior = value; }
+		}
+
+		public void LäggTill(Bok entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void TaBort(Bok entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void Uppdatera(Bok entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Bok HämtaMedID(int ID)
+		{
+			throw new NotImplementedException();
+		}
+
+		public IEnumerable<Bok> HämtaAlla()
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

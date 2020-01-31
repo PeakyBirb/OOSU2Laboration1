@@ -13,6 +13,13 @@ namespace Business_layer.Repository
 			set { bokLista = value; }
 		}
 
+		private List<Bok> bokningsLista;
+		public List<Bok> BokningsLista
+		{
+			get { return bokningsLista; }
+			set { bokningsLista = value; }
+		}
+
 		Expedit Expedit { get; set; }
 
 		private List<Faktura> fakturaLista;
