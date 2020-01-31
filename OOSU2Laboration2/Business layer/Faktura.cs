@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business_layer
 {
-    class Faktura
+    public class Faktura
     {
 
 

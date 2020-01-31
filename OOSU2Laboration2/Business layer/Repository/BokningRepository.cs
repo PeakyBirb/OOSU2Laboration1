@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business_layer.Repository
 {
-    class BokningRepository : IRepository<Bokning>
+    internal class BokningRepository : IRepository<Bokning>
     {
 		private List<Bok> bokLista;
 		public List<Bok> BokLista

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business_layer.Repository
 {
-    class FakturaRepository
+    internal class FakturaRepository
     {
         Bokning Bokning { get; set; }
     }

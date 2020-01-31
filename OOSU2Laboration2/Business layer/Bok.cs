@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business_layer
 {
-    class Bok 
+    public class Bok 
     {
 		private string ISBNnummer;
 		public string ISBNNummer
