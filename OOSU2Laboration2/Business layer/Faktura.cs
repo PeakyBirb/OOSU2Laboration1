@@ -13,18 +13,18 @@ namespace Business_layer
 			set { totalpris = value; }
 		}
 
-		private DateTime starttid;
-		public DateTime Starttid
+		private DateTime startDatum;
+		public DateTime StartDatum
 		{
-			get { return starttid; }
-			set { starttid = value; }
+			get { return startDatum; }
+			set { startDatum = value; }
 		}
 
-		private DateTime sluttid;
-		public DateTime Sluttid
+		private DateTime slutDatum;
+		public DateTime SlutDatum
 		{
-			get { return sluttid; }
-			set { sluttid = value; }
+			get { return slutDatum; }
+			set { slutDatum = value; }
 		}
 
 	}
