@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business_layer.Repository
 {
-    class BokningRepository
+    class BokningRepository : IRepository<Bokning>
     {
 		private List<Bok> bokLista;
 		public List<Bok> BokLista
@@ -31,5 +31,30 @@ namespace Business_layer.Repository
 
 
 		Medlem Medlem { get; set; }
+
+		public void LäggTill(Bokning entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void TaBort(Bokning entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void Uppdatera(Bokning entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Bokning HämtaMedID(int ID)
+		{
+			throw new NotImplementedException();
+		}
+
+		public IEnumerable<Bokning> HämtaAlla()
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
