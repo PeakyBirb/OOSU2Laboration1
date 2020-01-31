@@ -6,5 +6,13 @@ namespace Business_layer.Repository
 {
     class BokRepository
     {
-    }
+		private List<Bokning> bokningsLista;
+		public List<Bokning> BokningsLista
+		{
+			get { return bokningsLista; }
+			set { bokningsLista = value; }
+		}
+
+
+	}
 }

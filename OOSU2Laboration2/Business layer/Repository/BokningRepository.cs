@@ -15,6 +15,14 @@ namespace Business_layer.Repository
 
 		Expedit Expedit { get; set; }
 
+		private List<Faktura> fakturaLista;
+		public List<Faktura> FakturaLista
+		{
+			get { return fakturaLista; }
+			set { fakturaLista = value; }
+		}
 
+
+		Medlem Medlem { get; set; }
 	}
 }

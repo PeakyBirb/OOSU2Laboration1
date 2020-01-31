@@ -6,5 +6,13 @@ namespace Business_layer.Repository
 {
     class ExpeditRepository
     {
-    }
+		private List<Bokning> bokningsLista;
+		public List<Bokning> BokningsLista
+		{
+			get { return bokningsLista; }
+			set { bokningsLista = value; }
+		}
+
+
+	}
 }

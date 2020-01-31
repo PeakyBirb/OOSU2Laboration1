@@ -6,5 +6,6 @@ namespace Business_layer.Repository
 {
     class FakturaRepository
     {
+        Bokning Bokning { get; set; }
     }
 }
