@@ -13,7 +13,7 @@ namespace Business_layer
             return BokningR.HämtaAlla();
         }
 
-
+        //
 
     }
 }
