@@ -13,7 +13,7 @@ namespace Business_layer.Repository
             throw new NotImplementedException();
         }
 
-        public Faktura HämtaMedID(int ID)
+        public Faktura HämtaMedID(string ID)
         {
             throw new NotImplementedException();
         }

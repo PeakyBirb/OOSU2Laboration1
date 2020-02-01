@@ -47,9 +47,21 @@ namespace Business_layer.Repository
 			throw new NotImplementedException();
 		}
 
-		public Bokning HämtaMedID(int ID)
+		public Bokning HämtaMedID(string ID)
 		{
-			throw new NotImplementedException();
+			foreach (Bokning bokning in bokningsLista)
+			{
+				if (bokning.BokningsNummer == ID)
+				{
+					Bokning hittadBokn = bokning;
+					return hittadBokn;
+				}
+				else
+				{
+					return null;
+				}
+			}
+			return null;
 		}
 
 		public IEnumerable<Bokning> HämtaAlla()

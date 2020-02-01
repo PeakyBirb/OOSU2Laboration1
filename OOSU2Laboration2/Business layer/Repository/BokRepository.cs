@@ -18,7 +18,7 @@ namespace Business_layer.Repository
 			throw new NotImplementedException();
 		}
 
-		public Bok HämtaMedID(int ID)
+		public Bok HämtaMedID(string ID)
 		{
 			throw new NotImplementedException();
 		}

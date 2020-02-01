@@ -13,7 +13,11 @@ namespace Business_layer
             return BokningR.HämtaAlla();
         }
 
-        //
+        public Bokning HämtaBokningMedID(string Bokningsnummer)
+        {
+            return BokningR.HämtaMedID(Bokningsnummer);
+        }
+
 
     }
 }

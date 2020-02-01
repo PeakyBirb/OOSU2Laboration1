@@ -12,7 +12,7 @@ namespace Business_layer
 
         void Uppdatera(T entity);
 
-        T HämtaMedID(int ID);
+        T HämtaMedID(string ID);
 
         IEnumerable<T> HämtaAlla();
 
