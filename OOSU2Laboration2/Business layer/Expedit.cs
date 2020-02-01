@@ -6,6 +6,14 @@ namespace Business_layer
 {
     public class Expedit
     {
+		private List<Bokning> bokningsLista;
+		public List<Bokning> BokningsLista
+		{
+			get { return bokningsLista; }
+			set { bokningsLista = value; }
+		}
+
+
 		private string anställningsNummer;
 		public string AnställningsNummer
 		{
@@ -13,11 +21,17 @@ namespace Business_layer
 			set { anställningsNummer = value; }
 		}
 
-		private string namn;
-		public string Namn
+		private string förNamn;
+		public string FörNamn
 		{
-			get { return namn; }
-			set { namn = value; }
+			get { return förNamn; }
+			set { förNamn = value; }
+		}
+		private string efterNamn;
+		public string EfterNamn
+		{
+			get { return efterNamn; }
+			set { efterNamn = value; }
 		}
 
 		private string lösenord;
@@ -33,5 +47,11 @@ namespace Business_layer
 			get { return roll; }
 			set { roll = value; }
 		}
+		public string ExpeditFullName()
+		{
+			return FörNamn + " " + EfterNamn;
+		}
+
+
 	}
 }

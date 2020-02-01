@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business_layer.Repository
 {
     internal class BokningRepository : IRepository<Bokning>
     {
-		private List<Bok> bokLista;
-		public List<Bok> BokLista
-		{
-			get { return bokLista; }
-			set { bokLista = value; }
-		}
+		
 
 		private List<Bokning> bokningsLista;
 		public List<Bokning> BokningsLista
@@ -20,31 +16,22 @@ namespace Business_layer.Repository
 			set { bokningsLista = value; }
 		}
 
-		Expedit Expedit { get; set; }
+		
 
-		private List<Faktura> fakturaLista;
-		public List<Faktura> FakturaLista
+		public void LäggTill(Bokning bokning)
 		{
-			get { return fakturaLista; }
-			set { fakturaLista = value; }
+			BokningsLista.Add(bokning);
 		}
 
-
-		Medlem Medlem { get; set; }
-
-		public void LäggTill(Bokning entity)
+		public void TaBort(Bokning bokning)
 		{
-			throw new NotImplementedException();
+			bokningsLista.Remove(bokningsLista.SingleOrDefault(b => b.BokningsNummer == bokning.BokningsNummer));
 		}
 
-		public void TaBort(Bokning entity)
+		public void Uppdatera(Bokning bokning)
 		{
-			throw new NotImplementedException();
-		}
-
-		public void Uppdatera(Bokning entity)
-		{
-			throw new NotImplementedException();
+			bokningsLista.Remove(bokningsLista.SingleOrDefault(b => b.BokningsNummer == bokning.BokningsNummer));
+			bokningsLista.Add(bokning);
 		}
 
 		public Bokning HämtaMedID(string ID)

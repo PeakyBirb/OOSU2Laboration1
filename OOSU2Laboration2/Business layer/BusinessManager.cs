@@ -102,5 +102,65 @@ namespace Business_layer
 
 
         #endregion
+
+        #region faktura
+
+        public IEnumerable<Faktura> HämtaAllaFakturor()
+        {
+            return FakturaR.HämtaAlla();
+        }
+
+        public Faktura HämtaFakturaMedID(string FakturaNummer)
+        {
+            return FakturaR.HämtaMedID(FakturaNummer);
+        }
+
+        public void UppdateraFaktura(Faktura faktura)
+        {
+            FakturaR.Uppdatera(faktura);
+        }
+
+        public void TaBortFaktura(Faktura faktura)
+        {
+            FakturaR.TaBort(faktura);
+        }
+
+        public void LäggTillFaktura(Faktura faktura)
+        {
+            FakturaR.LäggTill(faktura);
+        }
+
+
+        #endregion
+
+        #region medlem
+
+        public IEnumerable<Medlem> HämtaAllaMedlemmar()
+        {
+            return MedlemR.HämtaAlla();
+        }
+
+        public Medlem HämtaMedlemMedID(string Medlemsnummer)
+        {
+            return MedlemR.HämtaMedID(Medlemsnummer);
+        }
+
+        public void UppdateraMedlem(Medlem medlem)
+        {
+            MedlemR.Uppdatera(medlem);
+        }
+
+        public void TaBortMedlem(Medlem medlem)
+        {
+            MedlemR.TaBort(medlem);
+        }
+
+        public void LäggTillMedlem(Medlem medlem)
+        {
+            MedlemR.LäggTill(medlem);
+        }
+
+
+        #endregion
     }
 }

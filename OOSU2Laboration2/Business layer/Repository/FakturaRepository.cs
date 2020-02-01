@@ -6,7 +6,7 @@ namespace Business_layer.Repository
 {
     internal class FakturaRepository : IRepository<Faktura>
     {
-        Bokning Bokning { get; set; }
+        
 
         public IEnumerable<Faktura> HämtaAlla()
         {

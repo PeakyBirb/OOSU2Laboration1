@@ -6,6 +6,26 @@ namespace Business_layer
 {
     public class Bokning
     {
+		Expedit Expedit { get; set; }
+
+		private List<Faktura> fakturaLista;
+		public List<Faktura> FakturaLista
+		{
+			get { return fakturaLista; }
+			set { fakturaLista = value; }
+		}
+
+
+		Medlem Medlem { get; set; }
+
+		private List<Bok> bokLista;
+		public List<Bok> BokLista
+		{
+			get { return bokLista; }
+			set { bokLista = value; }
+		}
+
+
 		private string bokningsNummer;
 		public string BokningsNummer
 		{

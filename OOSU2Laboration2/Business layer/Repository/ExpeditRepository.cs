@@ -1,41 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business_layer.Repository
 {
     internal class ExpeditRepository: IRepository<Expedit>
     {
-		private List<Bokning> bokningsLista;
-		public List<Bokning> BokningsLista
-		{
-			get { return bokningsLista; }
-			set { bokningsLista = value; }
-		}
 
-		public IEnumerable<Expedit> HämtaAlla()
-		{
-			throw new NotImplementedException();
-		}
+        List<Expedit> expediterLista { get; set; }
+        public Expedit HämtaMedID(string id)
+        {
+            foreach (Expedit expedit in expediterLista)
+            {
+                if (expedit.AnställningsNummer == id)
+                {
+                    Expedit hittadExpedit = expedit;
+                    return hittadExpedit;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            return null;
+        }
 
-		public Expedit HämtaMedID(string ID)
-		{
-			throw new NotImplementedException();
-		}
+        public IEnumerable<Expedit> HämtaAlla()
+        {
+            return expediterLista;
+        }
 
-		public void LäggTill(Expedit entity)
-		{
-			throw new NotImplementedException();
-		}
+        public void LäggTill(Expedit expedit)
+        {
+            expediterLista.Add(expedit);
+        }
 
-		public void TaBort(Expedit entity)
-		{
-			throw new NotImplementedException();
-		}
+        public void TaBort(Expedit expedit)
+        {
+            expediterLista.Remove(expediterLista.SingleOrDefault(e => e.AnställningsNummer == expedit.AnställningsNummer));
+        }
 
-		public void Uppdatera(Expedit entity)
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void Uppdatera(Expedit expedit)
+        {
+            expediterLista.Remove(expediterLista.SingleOrDefault(e => e.AnställningsNummer == expedit.AnställningsNummer));
+            expediterLista.Add(expedit);
+        }
+    }
 }

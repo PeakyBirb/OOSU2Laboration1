@@ -6,7 +6,7 @@ namespace Business_layer
 {
     public class Faktura
     {
-
+		Bokning Bokning { get; set; }
 
 		private string fakturaNummer;
 		public string FakturaNummer

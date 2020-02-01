@@ -6,6 +6,15 @@ namespace Business_layer
 {
     public class Bok 
     {
+
+		private List<Bokning> bokningsLista;
+		public List<Bokning> BokningsLista
+		{
+			get { return bokningsLista; }
+			set { bokningsLista = value; }
+		}
+
+
 		private string ISBNnummer;
 		public string ISBNNummer
 		{
