@@ -18,11 +18,11 @@ namespace Business_layer
 
 		Medlem Medlem { get; set; }
 
-		private List<Bok> bokLista;
-		public List<Bok> BokLista
+		private List<Bok> lånadeBöcker;
+		public List<Bok> LånadeBöcker
 		{
-			get { return bokLista; }
-			set { bokLista = value; }
+			get { return lånadeBöcker; }
+			set { lånadeBöcker = value; }
 		}
 
 
@@ -52,6 +52,15 @@ namespace Business_layer
 		{
 			get { return återlämningsDatum; }
 			set { återlämningsDatum = value; }
+		}
+
+		public Bokning(string bokningsnummer, DateTime startDatum, List<Bok> lånadeBöcker, Expedit expedit, Medlem medlem)
+		{
+			BokningsNummer = bokningsnummer;
+			StartDatum = startDatum;
+			LånadeBöcker = lånadeBöcker;
+			Expedit = expedit;
+			Medlem = medlem;
 		}
 	}
 }

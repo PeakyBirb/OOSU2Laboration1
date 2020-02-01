@@ -51,7 +51,15 @@ namespace Business_layer
 			return FörNamn + " " + EfterNamn;
 		}
 
-
+		public Medlem(string medlemsnummer, string förnamn, string efternamn, string telefonnummer, string epost, List<Bokning> bokningsLista)
+		{
+			MedlemsNummer = medlemsnummer;
+			FörNamn = förnamn;
+			EfterNamn = efternamn;
+			Telefonnummer = telefonnummer;
+			Epost = epost;
+			BokningsLista = bokningsLista;
+		}
 
 	}
 }

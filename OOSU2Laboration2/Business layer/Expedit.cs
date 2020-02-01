@@ -52,6 +52,14 @@ namespace Business_layer
 			return FörNamn + " " + EfterNamn;
 		}
 
+		public Expedit(string anställningsnummer, string förnamn, string efternamn, string lösenord, string roll)
+		{
+			AnställningsNummer = anställningsnummer;
+			FörNamn = förnamn;
+			EfterNamn = efternamn;
+			Lösenord = lösenord;
+			Roll = roll;
+		}
 
 	}
 }
