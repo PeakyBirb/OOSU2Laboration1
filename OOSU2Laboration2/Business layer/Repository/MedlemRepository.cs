@@ -1,41 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business_layer.Repository
 {
     internal class MedlemRepository : IRepository<Medlem>
     {
-		private List<Bokning> bokningsLista;
-		public List<Bokning> BokningsLista
-		{
-			get { return bokningsLista; }
-			set { bokningsLista = value; }
-		}
 
-		public IEnumerable<Medlem> HämtaAlla()
-		{
-			throw new NotImplementedException();
-		}
+        List<Medlem> medlemmar = new List<Medlem>();
+        public Medlem HämtaMedID(string id)
+        {
+            foreach (Medlem medlem in medlemmar)
+            {
+                if (medlem.MedlemsNummer == id)
+                {
+                    Medlem hittadMedlem = medlem;
+                    return hittadMedlem;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            return null;
+        }
 
-		public Medlem HämtaMedID(string ID)
-		{
-			throw new NotImplementedException();
-		}
+        public IEnumerable<Medlem> HämtaAlla()
+        {
+            return medlemmar;
+        }
 
-		public void LäggTill(Medlem entity)
-		{
-			throw new NotImplementedException();
-		}
+        public void LäggTill(Medlem medlem)
+        {
+            medlemmar.Add(medlem);
+        }
 
-		public void TaBort(Medlem entity)
-		{
-			throw new NotImplementedException();
-		}
+        public void TaBort(Medlem medlem)
+        {
+            medlemmar.Remove(medlemmar.SingleOrDefault(m => m.MedlemsNummer == medlem.MedlemsNummer));
+        }
 
-		public void Uppdatera(Medlem entity)
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void Uppdatera(Medlem medlem)
+        {
+            medlemmar.Remove(medlemmar.SingleOrDefault(m => m.MedlemsNummer == medlem.MedlemsNummer));
+            medlemmar.Add(medlem);
+
+        }
+    }
 }

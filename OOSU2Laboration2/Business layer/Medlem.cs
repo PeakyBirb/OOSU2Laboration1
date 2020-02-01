@@ -1,10 +1,18 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Text;
 
 namespace Business_layer
 {
     public class Medlem
     {
+		private List<Bokning> bokningsLista;
+		public List<Bokning> BokningsLista
+		{
+			get { return bokningsLista; }
+			set { bokningsLista = value; }
+		}
+
 		private string medlemsNummer;
 		public string MedlemsNummer
 		{
