@@ -49,6 +49,9 @@ namespace Business_layer.Repository
 
 		public Bokning HämtaMedID(string ID)
 		{
+			if (bokningsLista != null)
+			{
+
 			foreach (Bokning bokning in bokningsLista)
 			{
 				if (bokning.BokningsNummer == ID)
@@ -60,6 +63,7 @@ namespace Business_layer.Repository
 				{
 					return null;
 				}
+			}
 			}
 			return null;
 		}
