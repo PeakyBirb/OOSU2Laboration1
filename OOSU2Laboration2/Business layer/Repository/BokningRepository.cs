@@ -8,19 +8,13 @@ namespace Business_layer.Repository
     internal class BokningRepository : IRepository<Bokning>
     {
 		
-
-		private List<Bokning> bokningsLista;
-		public List<Bokning> BokningsLista
-		{
-			get { return bokningsLista; }
-			set { bokningsLista = value; }
-		}
+		List<Bokning> bokningsLista = new List<Bokning>();
 
 		
 
 		public void LäggTill(Bokning bokning)
 		{
-			BokningsLista.Add(bokning);
+			bokningsLista.Add(bokning);
 		}
 
 		public void TaBort(Bokning bokning)

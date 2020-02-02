@@ -16,5 +16,24 @@ namespace Presentationslager
         {
             InitializeComponent();
         }
+
+        public void TillbakaTillLogin()
+        {
+            this.Hide();
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is LogIn)
+                {
+                    form.Show();
+                    break;
+                }
+            }
+        }
+
+        private void TillbakaKnapp_Click(object sender, EventArgs e)
+        {
+            TillbakaTillLogin();
+        }
     }
 }
