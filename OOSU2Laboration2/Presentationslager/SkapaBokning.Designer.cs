@@ -35,6 +35,7 @@
             this.BokningsDatumVäljare = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.MedlemComboBox = new System.Windows.Forms.ComboBox();
+            this.BokaKnapp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -101,11 +102,23 @@
             this.MedlemComboBox.TabIndex = 8;
             this.MedlemComboBox.SelectedIndexChanged += new System.EventHandler(this.MedlemComboBox_SelectedIndexChanged);
             // 
+            // BokaKnapp
+            // 
+            this.BokaKnapp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BokaKnapp.Location = new System.Drawing.Point(675, 344);
+            this.BokaKnapp.Name = "BokaKnapp";
+            this.BokaKnapp.Size = new System.Drawing.Size(86, 54);
+            this.BokaKnapp.TabIndex = 9;
+            this.BokaKnapp.Text = "Boka";
+            this.BokaKnapp.UseVisualStyleBackColor = true;
+            this.BokaKnapp.Click += new System.EventHandler(this.BokaKnapp_Click);
+            // 
             // SkapaBokning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BokaKnapp);
             this.Controls.Add(this.MedlemComboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BokningsDatumVäljare);
@@ -130,5 +143,6 @@
         private System.Windows.Forms.DateTimePicker BokningsDatumVäljare;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox MedlemComboBox;
+        private System.Windows.Forms.Button BokaKnapp;
     }
 }

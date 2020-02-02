@@ -64,6 +64,13 @@ namespace Presentationslager
             return tillgängligaBöcker;
         }
 
+        public void BokaValdaBöcker()
+        {
+            List<Bok> valdaBöcker = new List<Bok>();
+
+            valdaBöcker = LedigaBöckerListBox.SelectedItems;
+        }
+
         private void LedigaBöckerListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -85,6 +92,11 @@ namespace Presentationslager
         }
 
         private void MedlemComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BokaKnapp_Click(object sender, EventArgs e)
         {
 
         }
