@@ -8,7 +8,7 @@ namespace Business_layer.Repository
     internal class ExpeditRepository: IRepository<Expedit>
     {
 
-        List<Expedit> expediterLista { get; set; }
+        List<Expedit> expediterLista = new List<Expedit>();
         public Expedit HämtaMedID(string id)
         {
             foreach (Expedit expedit in expediterLista)

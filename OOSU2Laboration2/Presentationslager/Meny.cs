@@ -7,22 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business_layer;
 
 namespace Presentationslager
 {
-    public partial class Form1 : Form
+    public partial class Meny : Form
     {
-        BusinessManager bm = new BusinessManager();
-        public Form1()
+        public Meny()
         {
             InitializeComponent();
-            
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            bm.HämtaAllaBokningar();
         }
     }
 }
