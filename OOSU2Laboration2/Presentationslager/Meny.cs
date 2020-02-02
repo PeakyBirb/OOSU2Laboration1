@@ -13,25 +13,20 @@ namespace Presentationslager
 {
     public partial class Meny : Form
     {
-        BusinessManager bm = new BusinessManager();
+        BusinessManager bm { get; set; }
 
-        public Meny()
+        public Meny(BusinessManager BM)
         {
             InitializeComponent();
+            bm = BM;
         }
 
         public void TillbakaTillLogin()
         {
+            LogIn logIn = new LogIn(bm);
+            logIn.Show();
             this.Hide();
 
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is LogIn)
-                {
-                    form.Show();
-                    break;
-                }
-            }
         }
 
         private void TillbakaKnapp_Click(object sender, EventArgs e)

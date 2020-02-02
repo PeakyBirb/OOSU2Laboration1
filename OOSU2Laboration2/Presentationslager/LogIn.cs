@@ -13,7 +13,7 @@ namespace Presentationslager
 {
     public partial class LogIn : Form
     {
-        BusinessManager bm = new BusinessManager();
+        BusinessManager bm { get; set; }
 
         public void SkapaExpedit()
         {
@@ -44,10 +44,10 @@ namespace Presentationslager
         }
 
 
-        public LogIn()
+        public LogIn(BusinessManager BM)
         {
             InitializeComponent();
-
+            bm = BM;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,8 +66,8 @@ namespace Presentationslager
         {
             if (Inloggning(anställningsnummerTextbox.Text, lösenordTextbox.Text) == true)
             {
-                Meny form = new Meny();
-                form.Show();
+                Meny menyForm = new Meny(bm);
+                menyForm.Show();
 
                 this.Hide();
             }

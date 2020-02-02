@@ -13,7 +13,7 @@ namespace Presentationslager
 {
     public partial class SkapaBokning : Form
     {
-        BusinessManager bm = new BusinessManager();
+        BusinessManager bm { get; set; }
 
         public SkapaBokning()
         {
