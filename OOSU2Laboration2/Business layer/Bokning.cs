@@ -43,7 +43,7 @@ namespace Business_layer
 		private DateTime slutDatum;
 		public DateTime SlutDatum
 		{
-			get { return slutDatum; }
+			get { return startDatum.AddDays(14); }
 			set { slutDatum = value; }
 		}
 

@@ -21,6 +21,21 @@ namespace Presentationslager
             bm.LäggTillExpedit(nyExpedit);
         }
 
+        public void LäggTillBöcker()
+        {
+            Bok nyBok1 = new Bok("978-91-7000-150-5", "C# är superskoj", "Bert Bertilsson", false, 2);
+            Bok nyBok2 = new Bok("928-94-8880-158-4", "Att skriva skönlitterär kod", "Nost Loi", false, 2);
+
+            bm.LäggTillBok(nyBok1);
+            bm.LäggTillBok(nyBok2);
+        }
+
+        public void LäggTillMedlem()
+        {
+            Medlem nyMedlem = new Medlem("123456", "Mia", "Majsson", "0206369658", "miamajsson@email.com", null);
+        }
+
+
         public bool Inloggning(string ID, string lösenord)
         {
             var expediter = bm.HämtaAllaExpediter();
