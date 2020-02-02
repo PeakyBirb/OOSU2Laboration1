@@ -29,6 +29,14 @@ namespace Business_layer
 			set { titel = value; }
 		}
 
+		private string författare;
+		public string Författare
+		{
+			get { return författare; }
+			set { författare = value; }
+		}
+
+
 		private bool utlånad;
 		public bool Utlånad
 		{

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Business_layer
 {
-    public class Medlem
-    {
+	public class Medlem
+	{
 		private List<Bokning> bokningsLista;
 		public List<Bokning> BokningsLista
 		{
@@ -46,9 +46,9 @@ namespace Business_layer
 			get { return epost; }
 			set { epost = value; }
 		}
-		public string MedlemFullName()
+		public string MedlemFullName
 		{
-			return FörNamn + " " + EfterNamn;
+			get { return FörNamn + " " + EfterNamn; }
 		}
 
 		public Medlem(string medlemsnummer, string förnamn, string efternamn, string telefonnummer, string epost, List<Bokning> bokningsLista)
