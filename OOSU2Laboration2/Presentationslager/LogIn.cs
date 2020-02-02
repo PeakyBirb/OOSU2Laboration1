@@ -33,6 +33,8 @@ namespace Presentationslager
         public void LäggTillMedlem()
         {
             Medlem nyMedlem = new Medlem("123456", "Mia", "Majsson", "0206369658", "miamajsson@email.com", null);
+
+            bm.LäggTillMedlem(nyMedlem);
         }
 
 
@@ -68,6 +70,9 @@ namespace Presentationslager
         private void Form1_Load(object sender, EventArgs e)
         {
             SkapaExpedit();
+            LäggTillBöcker();
+            LäggTillMedlem();
+
             anställningsnummerTextbox.Text = "4756";
             lösenordTextbox.Text = "cvbnm123";
         }

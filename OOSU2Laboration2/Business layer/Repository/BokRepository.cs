@@ -7,16 +7,11 @@ namespace Business_layer.Repository
 {
     internal class BokRepository : IRepository<Bok>
     {
-		private List<Bok> bokLista;
-		public List<Bok> BokLista
-		{
-			get { return bokLista; }
-			set { bokLista = value; }
-		}
+		public List<Bok> bokLista = new List<Bok>();
 
 		public void LäggTill(Bok bok)
 		{
-			BokLista.Add(bok);
+			bokLista.Add(bok);
 		}
 
 		public void TaBort(Bok bok)
