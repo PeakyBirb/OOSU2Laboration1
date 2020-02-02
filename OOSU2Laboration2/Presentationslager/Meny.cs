@@ -35,5 +35,12 @@ namespace Presentationslager
         {
             TillbakaTillLogin();
         }
+
+        private void SkapaBokningKnapp_Click(object sender, EventArgs e)
+        {
+            SkapaBokning nySkapaBokning = new SkapaBokning();
+            nySkapaBokning.Show();
+
+        }
     }
 }

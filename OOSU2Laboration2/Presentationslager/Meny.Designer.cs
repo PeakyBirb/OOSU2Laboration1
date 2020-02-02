@@ -56,7 +56,7 @@
             // 
             // SkapaBokningKnapp
             // 
-            this.SkapaBokningKnapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SkapaBokningKnapp.BackColor = System.Drawing.Color.Plum;
             this.SkapaBokningKnapp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SkapaBokningKnapp.Location = new System.Drawing.Point(125, 150);
             this.SkapaBokningKnapp.Name = "SkapaBokningKnapp";
@@ -64,10 +64,11 @@
             this.SkapaBokningKnapp.TabIndex = 2;
             this.SkapaBokningKnapp.Text = "Skapa bokning";
             this.SkapaBokningKnapp.UseVisualStyleBackColor = false;
+            this.SkapaBokningKnapp.Click += new System.EventHandler(this.SkapaBokningKnapp_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.BackColor = System.Drawing.Color.Plum;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(503, 150);
             this.button1.Name = "button1";
