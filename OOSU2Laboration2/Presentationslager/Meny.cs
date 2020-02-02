@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business_layer;
 
 namespace Presentationslager
 {
     public partial class Meny : Form
     {
+        BusinessManager bm = new BusinessManager();
+
         public Meny()
         {
             InitializeComponent();
@@ -40,6 +43,11 @@ namespace Presentationslager
         {
             SkapaBokning nySkapaBokning = new SkapaBokning();
             nySkapaBokning.Show();
+
+        }
+
+        private void Meny_Load(object sender, EventArgs e)
+        {
 
         }
     }

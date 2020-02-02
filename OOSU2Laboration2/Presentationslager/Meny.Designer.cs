@@ -89,6 +89,7 @@
             this.Controls.Add(this.TillbakaKnapp);
             this.Name = "Meny";
             this.Text = "Meny";
+            this.Load += new System.EventHandler(this.Meny_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

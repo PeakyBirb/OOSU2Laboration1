@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business_layer;
 
 namespace Presentationslager
 {
     public partial class SkapaBokning : Form
     {
+        BusinessManager bm = new BusinessManager();
+
         public SkapaBokning()
         {
             InitializeComponent();
