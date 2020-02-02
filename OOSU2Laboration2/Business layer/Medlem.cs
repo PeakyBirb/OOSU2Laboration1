@@ -46,7 +46,7 @@ namespace Business_layer
 			get { return epost; }
 			set { epost = value; }
 		}
-		public string MedlemFullName
+		public string MedlemHeltNamn
 		{
 			get { return FörNamn + " " + EfterNamn; }
 		}

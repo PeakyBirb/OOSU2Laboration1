@@ -69,9 +69,12 @@ namespace Presentationslager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SkapaExpedit();
-            LäggTillBöcker();
-            LäggTillMedlem();
+            if (bm.HämtaAllaExpediter().Count() < 1)
+            {
+                SkapaExpedit();
+                LäggTillBöcker();
+                LäggTillMedlem();
+            }
 
             anställningsnummerTextbox.Text = "4756";
             lösenordTextbox.Text = "cvbnm123";

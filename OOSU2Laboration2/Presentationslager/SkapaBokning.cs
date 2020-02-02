@@ -19,10 +19,19 @@ namespace Presentationslager
         {
             InitializeComponent();
             bm = BM;
+            HämtaMedlemmarComboBox();
         }
 
         private void SkapaBokning_Load(object sender, EventArgs e)
         {
+
+        }
+
+        public void HämtaMedlemmarComboBox()
+        {
+            MedlemComboBox.DataSource = bm.HämtaAllaMedlemmar();
+            MedlemComboBox.ValueMember = "MedlemsNummer";
+            MedlemComboBox.DisplayMember = "MedlemHeltNamn";
 
         }
 
@@ -71,6 +80,11 @@ namespace Presentationslager
 
 
         private void BokningsDatumVäljare_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MedlemComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

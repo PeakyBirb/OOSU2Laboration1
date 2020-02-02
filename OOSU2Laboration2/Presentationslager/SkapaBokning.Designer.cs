@@ -31,9 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.LedigaBöckerListBox = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SökDatumKnapp = new System.Windows.Forms.Button();
             this.BokningsDatumVäljare = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.MedlemComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -60,16 +61,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(404, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 13);
+            this.label2.Size = new System.Drawing.Size(230, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Bokningsnummer för medlem som äger bokning:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(642, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 4;
+            this.label2.Text = "Medlemsnummer för medlem som äger bokning:";
             // 
             // SökDatumKnapp
             // 
@@ -89,14 +83,33 @@
             this.BokningsDatumVäljare.TabIndex = 6;
             this.BokningsDatumVäljare.ValueChanged += new System.EventHandler(this.BokningsDatumVäljare_ValueChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(404, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(315, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Böcker bokas i 14 dagar och du debiteras 10 kr per försenad dag";
+            // 
+            // MedlemComboBox
+            // 
+            this.MedlemComboBox.FormattingEnabled = true;
+            this.MedlemComboBox.Location = new System.Drawing.Point(640, 81);
+            this.MedlemComboBox.Name = "MedlemComboBox";
+            this.MedlemComboBox.Size = new System.Drawing.Size(121, 21);
+            this.MedlemComboBox.TabIndex = 8;
+            this.MedlemComboBox.SelectedIndexChanged += new System.EventHandler(this.MedlemComboBox_SelectedIndexChanged);
+            // 
             // SkapaBokning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.MedlemComboBox);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.BokningsDatumVäljare);
             this.Controls.Add(this.SökDatumKnapp);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LedigaBöckerListBox);
             this.Controls.Add(this.label1);
@@ -113,8 +126,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox LedigaBöckerListBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button SökDatumKnapp;
         private System.Windows.Forms.DateTimePicker BokningsDatumVäljare;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox MedlemComboBox;
     }
 }
