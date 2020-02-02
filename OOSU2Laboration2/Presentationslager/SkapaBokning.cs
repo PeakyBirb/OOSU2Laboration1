@@ -64,8 +64,8 @@ namespace Presentationslager
         {
 
             LedigaBöckerListBox.DataSource = ListaTillgängligaBöcker(BokningsDatumVäljare.Value);
-            //LedigaBöckerListBox.ValueMember = "ISBNNummer";
-            //LedigaBöckerListBox.DisplayMember = "Titel";
+            LedigaBöckerListBox.ValueMember = "ISBNNummer";
+            LedigaBöckerListBox.DisplayMember = "BokTitelFörfattare";
 
         }
 
