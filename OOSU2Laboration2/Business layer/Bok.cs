@@ -7,12 +7,8 @@ namespace Business_layer
     public class Bok 
     {
 
-		private List<Bokning> bokningsLista;
-		public List<Bokning> BokningsLista
-		{
-			get { return bokningsLista; }
-			set { bokningsLista = value; }
-		}
+
+		public List<Bokning> bokningsLista = new List<Bokning>();
 
 
 		private string ISBNnummer;
@@ -51,13 +47,19 @@ namespace Business_layer
 			set { antalKopior = value; }
 		}
 
-		public Bok(string isbnnummer, string titel, string författare, bool utlånad, int antalkopior)
+		public string BokTitelFörfattare
+		{
+			get { return Författare + " - " + Titel; }
+		}
+
+		public Bok(string isbnnummer, string titel, string författare, bool utlånad, int antalkopior, List<Bokning> BokningsLista)
 		{
 			ISBNNummer = isbnnummer;
 			Titel = titel;
 			Författare = författare;
 			Utlånad = utlånad;
 			AntalKopior = antalkopior;
+			bokningsLista = BokningsLista;
 		}
 
 	}

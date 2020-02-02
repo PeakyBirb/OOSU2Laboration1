@@ -23,8 +23,8 @@ namespace Presentationslager
 
         public void LäggTillBöcker()
         {
-            Bok nyBok1 = new Bok("978-91-7000-150-5", "C# är superskoj", "Bert Bertilsson", false, 2);
-            Bok nyBok2 = new Bok("928-94-8880-158-4", "Att skriva skönlitterär kod", "Nost Loi", false, 2);
+            Bok nyBok1 = new Bok("978-91-7000-150-5", "C# är superskoj", "Bert Bertilsson", false, 2, null);
+            Bok nyBok2 = new Bok("928-94-8880-158-4", "Att skriva skönlitterär kod", "Nost Loi", false, 2, null);
 
             bm.LäggTillBok(nyBok1);
             bm.LäggTillBok(nyBok2);
