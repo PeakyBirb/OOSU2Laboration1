@@ -84,7 +84,11 @@ namespace Presentationslager
             //ta med expedit
 
 
+            //bokningsnummer
+            string nyttBokningsnummer = 
+
             //båda till bokning
+
             Bokning nyBokning = new Bokning();
             //räkna ner antalkopior
         }
