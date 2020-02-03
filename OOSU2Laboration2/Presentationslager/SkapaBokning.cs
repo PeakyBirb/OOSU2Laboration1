@@ -42,16 +42,17 @@ namespace Presentationslager
             
             foreach (var bok in bm.HämtaAllaBöcker())
             {
-                if (bok.bokningsLista == null)
+                if (bok.bokningsLista == null && bok.AntalKopior > 0)
                 {
                     tillgängligaBöcker.Add(bok);
                 }
             }
+
             foreach (var bokning in bm.HämtaAllaBokningar())
             {
                 foreach (var bok in bokning.LånadeBöcker)
                 {
-                    if ((nyBokningStartDatum > bokning.SlutDatum) && (nyBokningSlutDatum < bokning.StartDatum))
+                    if ((nyBokningStartDatum > bokning.SlutDatum) && (nyBokningSlutDatum < bokning.StartDatum) && (bok.AntalKopior > 0))
                     {
                         tillgängligaBöcker.Add(bok);
 
@@ -82,9 +83,10 @@ namespace Presentationslager
 
             //ta med expedit
 
+
             //båda till bokning
             Bokning nyBokning = new Bokning();
-
+            //räkna ner antalkopior
         }
 
         private void LedigaBöckerListBox_SelectedIndexChanged(object sender, EventArgs e)
