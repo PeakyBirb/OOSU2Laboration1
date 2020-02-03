@@ -66,9 +66,25 @@ namespace Presentationslager
 
         public void BokaValdaBöcker()
         {
+
+            //böckerna
             List<Bok> valdaBöcker = new List<Bok>();
 
-            valdaBöcker = LedigaBöckerListBox.SelectedItems;
+            foreach (Bok bok in LedigaBöckerListBox.SelectedItems)
+            {
+                valdaBöcker.Add(bok);
+            }
+            //medlemmen
+            Medlem valdMedlem = (Medlem)MedlemComboBox.SelectedItem;
+
+            //startdatum
+            DateTime valtStartDatum = BokningsDatumVäljare.Value;
+
+            //ta med expedit
+
+            //båda till bokning
+            Bokning nyBokning = new Bokning();
+
         }
 
         private void LedigaBöckerListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,7 +114,7 @@ namespace Presentationslager
 
         private void BokaKnapp_Click(object sender, EventArgs e)
         {
-
+            BokaValdaBöcker();
         }
     }
 }
